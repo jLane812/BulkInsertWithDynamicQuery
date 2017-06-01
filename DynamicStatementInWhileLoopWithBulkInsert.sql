@@ -61,7 +61,8 @@ SET @SQLquery = N'WITH newCEC AS
 				 INNER JOIN #VIGO_CEC vigo ON gv.Variant_NetSuiteID = vigo.Variant_NetSuiteID
 				 )
 					
-				 SELECT * FROM newCEC'
+				 UPDATE newCEC
+				 SET OLD = NEW'
 
 
 
